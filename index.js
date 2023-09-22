@@ -1,9 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const port = process.env.PORT || 6200;
 const bodyparser = require('body-parser');
 
 const app = express();
-app.use(express.json);
+// app.use(express.json);
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}));
 
@@ -20,5 +21,5 @@ app.get("/", (req, res)=>{
 
 app.post("/", (req,res)=>{
     const {name} = req.body;
-    res.send('Welcome ',name)
+    res.send('Welcome ' + name);
 });
