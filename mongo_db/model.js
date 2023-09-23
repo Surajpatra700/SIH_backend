@@ -13,4 +13,4 @@ const ModelSchema = new mongoose.Schema({
     link10: String,
 });
 
-module.exports = mongoose.model("Text_To_Video", ModelSchema);
+module.exports = mongoose.model("Image_To_Video", ModelSchema);
